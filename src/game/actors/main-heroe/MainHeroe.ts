@@ -4,7 +4,7 @@ import ImageSrc from "./front.png"
 import ImageUpSrc from "./up.png"
 import ImageBackSrc from "./back.png"
 import ImageLeftSrc from "./left.png"
-import ImageRightSrc from "./Right.png"
+import ImageRightSrc from "./right.png"
 
 const front = new ImageSource(ImageSrc);
 const up = new ImageSource(ImageUpSrc);
