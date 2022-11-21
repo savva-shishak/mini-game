@@ -37,6 +37,9 @@ export class Mob extends Actor {
 
     this.graphics.onPreDraw = ((ctx, delta) => {
       this.amplitudeDelta += delta / 10;
+      if (this.amplitudeDelta > 1000) {
+        this.amplitudeDelta = 0;
+      }
       const range = this.direction === 'front' ? 0 : (Math.sin(this.amplitudeDelta / 3) * 3);
       const source = this.images[this.direction];
       if (source) {
