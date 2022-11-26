@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas" width="4000" height="4000"></canvas>
+  <script>
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'green';
+    for (let x = 0; x < 4000; x++) {
+      for (let y = 0; y < 4000; y++) {
+        ctx.fillStyle = `#00${(((Math.random() * 100) >> 0) + 155).toString(16)}00`;
+        ctx.fillRect(x, y, 1, 1);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@ import { Actor, Engine, ImageSource } from "excalibur";
 import { House } from "../actors/house/House";
 import { MainHeroe } from "../actors/main-heroe/MainHeroe";
 import { Sheep } from "../actors/sheep/Sheep";
-import PlaneSrc from './plane.png';
+import PlaneSrc from './plane.jpeg';
 
 export interface GameActor extends Actor {
   game?: Engine;
@@ -13,10 +13,10 @@ const planeImg = new ImageSource(PlaneSrc);
 
 export class World {
   public readonly borders = {
-    left: 1000,
-    right: 1000,
-    top: 1000,
-    bottom: 1000,
+    left: 2000,
+    right: 2000,
+    top: 2000,
+    bottom: 2000,
   }
 
   get width() {

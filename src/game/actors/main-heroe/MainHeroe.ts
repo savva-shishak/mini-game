@@ -1,20 +1,20 @@
 import { ImageSource, Input } from 'excalibur';
 import ImageSrc from "./front.png"
-import ImageUpSrc from "./up.png"
 import ImageBackSrc from "./back.png"
-import ImageLeftSrc from "./left.png"
-import ImageRightSrc from "./right.png"
+import ImageLeft1Src from "./left-1.png"
+import ImageRight1Src from "./right-1.png"
+import ImageLeft2Src from "./left-2.png"
+import ImageRight2Src from "./right-2.png"
 import { Mob } from '../mob/Mob';
 
 const front = new ImageSource(ImageSrc);
-const up = new ImageSource(ImageUpSrc);
 const back = new ImageSource(ImageBackSrc);
-const left = new ImageSource(ImageLeftSrc);
-const right = new ImageSource(ImageRightSrc);
+const left = [new ImageSource(ImageLeft1Src), new ImageSource(ImageLeft2Src)];
+const right = [new ImageSource(ImageRight1Src), new ImageSource(ImageRight2Src)];
 
 const imagesObj = {
   front,
-  up,
+  up: front,
   back,
   left,
   right,
@@ -29,8 +29,8 @@ export class MainHeroe extends Mob {
         name: 'mainHeroe',
         x: 0,
         y: 0,
-        width: 50,
-        height: 50
+        width: 25,
+        height: 45
       }
     );
   }
@@ -50,10 +50,10 @@ export class MainHeroe extends Mob {
         this.direction = 'right';
       }
       if (key === Input.Keys.ArrowUp) {
-        this.direction = 'up';
+        this.direction = 'back';
       }
       if (key === Input.Keys.ArrowDown) {
-        this.direction = 'back';
+        this.direction = 'up';
       }
     });
   }
